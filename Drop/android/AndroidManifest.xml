@@ -2,25 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mygdx.drop" >
 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="20" />
-
+    <uses-sdk android:targetSdkVersion="20" android:minSdkVersion="8"/>
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:isGame="true"
-        android:appCategory="game"
+        android:theme="@style/GdxTheme"
         android:label="@string/app_name"
-        android:theme="@style/GdxTheme" >
+        android:appCategory="game"
+        android:isGame="true"
+        android:icon="@drawable/ic_launcher"
+        android:allowBackup="true">
         <activity
-            android:name="com.mygdx.drop.AndroidLauncher"
-            android:label="@string/app_name" 
+            android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout"
             android:screenOrientation="landscape"
-            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|screenLayout">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name="com.mygdx.drop.AndroidLauncher">
+
+        <intent-filter>
+            <action
+                android:name="android.intent.action.MAIN"/>
+            <category
+                android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
     </application>
 
 </manifest>

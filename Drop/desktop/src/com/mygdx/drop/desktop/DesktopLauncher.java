@@ -2,7 +2,7 @@ package com.mygdx.drop.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.mygdx.drop.MyGdxDrop;
+import com.mygdx.drop.ControlGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
@@ -10,6 +10,6 @@ public class DesktopLauncher {
 		config.title = "Drop";
 		config.width = 800;
 		config.height = 480;
-		new LwjglApplication(new MyGdxDrop(), config);
+		new LwjglApplication(new ControlGame(), config);
 	}
 }
